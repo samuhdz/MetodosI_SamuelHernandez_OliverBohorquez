@@ -18,3 +18,8 @@ axs[0].scatter(t,array_posición) #Recibe arrays del mismo tamaño
 axs[0].set_xlabel('Tiempo (s)')
 axs[0].plot(t,array_posición) #Hace lo mismo pero uninedo puntos con lineas
 vector_aceleracion=np.tile(g,30) #Me crea un array con todas las entradas iguales
+ #Una clase es es una plantilla para un objeto
+
+lugar= "Zapatoca- Santander, Colombia"
+lugar.splt("-")[1].strip()
+   
