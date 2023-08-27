@@ -1,0 +1,2 @@
+"1.1- touch materiales.txt"
+"1.1- awk -F "," 'print{$1}' indices_refraccion.csv >>materiales.txt"
