@@ -1,6 +1,6 @@
 # %%
 class Mineral:
-    def __init__(self,nombre,dureza,rompimiento_por_fractura,color,composicion, lustre,specific_gravity, sistema_cristalino,):
+    def __init__(self,nombre,dureza,rompimiento_por_fractura,color,composicion, lustre,specific_gravity, sistema_cristalino):
         self.nombre=nombre
         self.dureza=dureza
         self.lustre=lustre
