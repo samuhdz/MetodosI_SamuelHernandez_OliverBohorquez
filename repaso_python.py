@@ -21,5 +21,5 @@ vector_aceleracion=np.tile(g,30) #Me crea un array con todas las entradas iguale
  #Una clase es es una plantilla para un objeto
 
 lugar= "Zapatoca- Santander, Colombia"
-lugar.splt("-")[1].strip()
+lugar.split("-")[1].strip() 
    
