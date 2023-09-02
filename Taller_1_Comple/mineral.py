@@ -1,4 +1,6 @@
-# %%
+import numpy as np
+import matplotlib.pyplot as plt
+
 class Mineral:
     def __init__(self,nombre,dureza,rompimiento_por_fractura,color,composicion, lustre,specific_gravity, sistema_cristalino):
         self.nombre=nombre
@@ -12,17 +14,15 @@ class Mineral:
     def silicato (self):
         silicato=True
         if "Si" in self.composicion and "O" in self.composicion:
-            silicato1=True
+            silicato=True
         else:
-            silicato1=False
+            silicato=False
         return self.silicato
     def densidad (self):
         return str((self.specific_gravity)*(997))+"kg/m^3"
     def mostrar_color(self):
-         
-        fig, ax = plt.subplots()
 
-        
+        fig, ax = plt.subplots()
         ax.set_facecolor(self.color)
         ax.set_title('Color más frecuente de'+self.nombre)
         plt.show()
@@ -35,6 +35,4 @@ class Mineral:
         return rompimiento
     def imprimir (self):
         print("La dureza del material es:"+ str(self.dureza)+  " , su tipo de rompimiento es" + es_por_fractura(self)+ "y el sistema de los átomos es "+ self.sistema_cristalino )
-
-
 
