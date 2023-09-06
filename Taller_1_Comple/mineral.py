@@ -20,7 +20,8 @@ class Mineral:
             silicato=False
         return silicato 
     def densidad (self):
-        return str((self.specific_gravity)*(997))+"kg/m^3"
+        decimal_gravedad=float(self.specific_gravity)
+        return decimal_gravedad*(997) 
     def mostrar_color(self):
          # Crear una figura y un eje
         fig, ax = plt.subplots()
@@ -31,13 +32,17 @@ class Mineral:
         plt.show()
     def es_por_fractura (self):
         rompimiento=" "
-        if self.rompimiento_por_fractura==True:
+        if self.rompimiento_por_fractura=="TRUE":
             rompimiento=" por fractura"
         else:
             rompimiento=" no es por fractura"
+        
         return rompimiento
     def imprimir (self):
-        print("La dureza del material es:"+ str(self.dureza)+  " , su tipo de rompimiento es" + self.es_por_fractura(self)+ "y el sistema de los átomos es "+ self.sistema_cristalino )
+        print("La dureza del material es:"+ str(self.dureza)+  " , su tipo de rompimiento es" + self.es_por_fractura()+ " y el sistema de los átomos es "+ self.sistema_cristalino )
+
+
+
 
 
 

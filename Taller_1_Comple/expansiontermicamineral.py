@@ -48,8 +48,7 @@ class ExpansionTermicaMineral (Mineral):
         ax1.set_title('V vs T')
         ax2.set_title('α vs T')
         return  fig, np.mean(alphas),error
-
-# %%
+        
 hola=ExpansionTermicaMineral("graphite_mceligot_2016.csv")
 b=ExpansionTermicaMineral.alpha(hola)
 print(b)
