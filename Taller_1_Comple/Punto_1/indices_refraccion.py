@@ -62,6 +62,8 @@ plt.show()
 
 def crear_imagenes_graficas():
     rutas=glob.glob("**/*.yml", recursive=True)
+    #no tengo muy claro el por qué el glob no me coge todas las rutas yml de todas las carpetas a pesar de haberle
+    #pasado el **/*
     for i in rutas:
         crear_grafico(i)
         plt.close()
