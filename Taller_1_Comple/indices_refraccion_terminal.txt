@@ -1,2 +1,12 @@
 "1.1- touch materiales.txt"
 "1.1- awk -F "," 'print{$1}' indices_refraccion.csv >>materiales.txt"
+
+"1.2-
+while IFS="," read categoria fabricante material enlace;
+do
+enlaces=$(echo "$enlace") 
+mkdir -p "$categoria"
+wget -O "$categoria/$material.yml" $enlaces
+done < indices_refraccion.csv
+rm -r Categoría/
+"
